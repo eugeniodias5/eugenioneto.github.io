@@ -1,0 +1,19 @@
+{% macro grid(interests) %}
+<section class="interests">
+  <div class="interests-grid">
+    {% for item in interests %}
+    <div class="interest-card">
+      <div class="interest-media">
+        {% set ext = item.image | split(pat=".") | last %}
+        {% if ext == "mp4" or ext == "webm" or ext == "avi" %}
+        <video src="{{ item.image }}" autoplay loop muted playsinline></video>
+        {% else %}
+        <img src="{{ item.image }}" alt="{{ item.title }}">
+        {% endif %}
+      </div>
+      <p>{{ item.title }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endmacro %}

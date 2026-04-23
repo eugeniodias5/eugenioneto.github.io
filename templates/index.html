@@ -1,10 +1,78 @@
 {% extends "base.html" %}
+{% import "macros/interest.html" as interest %}
+
+{% block head_extra %}
+<style>
+.home{display:flex;gap:2rem;align-items:flex-start;margin-bottom:2rem}
+.home-photo{display:flex;flex-direction:column;align-items:center;flex-shrink:0}
+.home-photo .profile-pic{width:8rem;height:8rem;border-radius:50%;object-fit:cover;margin:0 0 1rem}
+.social-links{list-style:none;padding:0;margin:0;display:flex;gap:.75rem;flex-wrap:wrap;justify-content:center}
+.social-links a{display:flex;align-items:center;gap:.35rem;font-size:.85rem;text-decoration:none}
+.social-links img,.social-links svg{width:1.1rem;height:1.1rem}
+.home-text h1{margin-top:0;margin-bottom:.25rem}
+.home-text .description{margin-top:.75rem}
+@media(max-width:30em){.home{flex-direction:column;align-items:center}.home-text{text-align:center}}
+
+.terminal-line{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;font-size:.95rem;margin:.25rem 0 0;height:1.4em;display:flex;align-items:center;gap:.4em}
+.terminal-prompt{opacity:.5}
+.terminal-text{overflow:hidden;white-space:nowrap;border-right:2px solid currentColor;animation:blink-caret .75s step-end infinite}
+@keyframes blink-caret{from,to{border-color:transparent}50%{border-color:currentColor}}
+
+.interests h2{margin-bottom:1rem}
+.interests-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;align-items:stretch}
+.interest-card{display:flex;flex-direction:column;align-items:center;gap:.5rem;height:100%}
+.interest-media{width:100%;overflow:hidden;border-radius:.4rem;display:flex;align-items:center;justify-content:center;flex:1}
+.interest-media img,.interest-media video{width:100%;height:100%;max-height:10rem;object-fit:contain;display:block}
+.interest-card p{margin:0;font-size:.9rem;text-align:center;font-weight:600}
+@media(max-width:40em){.interests-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:25em){.interests-grid{grid-template-columns:1fr}}
+</style>
+{% endblock head_extra %}
 
 {% block content %}
-{% if config.extra.profile_picture %}
-<img src="{{ config.extra.profile_picture }}" alt="Profile picture" class="profile-pic">
-{% endif %}
+<div class="home">
+  {% if config.extra.profile_picture %}
+  <div class="home-photo">
+    <img src="{{ config.extra.profile_picture }}" alt="Profile picture" class="profile-pic">
+    {% if config.extra.social_links %}
+    <ul class="social-links">
+      {% for link in config.extra.social_links %}
+      <li>
+        <a href="{{ link.url }}" aria-label="{{ link.name }}" title="{{ link.name }}">
+          {% if link.svg %}<img src="/icons/{{ link.svg }}" alt="">{% endif %}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+  {% endif %}
+  <div class="home-text">
+    <h1>{{ section.title }}</h1>
+    <p class="terminal-line" aria-hidden="true">
+      <span class="terminal-prompt">$</span>
+      <span class="terminal-text" id="terminal-text"></span>
+    </p>
+    {% if section.description %}<p class="description">{{ section.description }}</p>{% endif %}
+  </div>
+</div>
 
 <article>{{ section.content | safe }}</article>
 
+{% if section.extra.interests %}
+{{ interest::grid(interests=section.extra.interests) }}
+{% endif %}
+
+<script>
+(function(){
+  var el=document.getElementById('terminal-text');
+  if(!el)return;
+  var phrases=['Hello there!','Welcome to my personal website!','Feel free to explore my work ;)'];
+  var idx=0,charDelay=80,pauseAfterType=1500,pauseAfterErase=500;
+  function type(text,cb){var i=0;(function next(){el.textContent=text.slice(0,++i);if(i<text.length)setTimeout(next,charDelay);else cb();})();}
+  function erase(cb){var len=el.textContent.length,i=len;(function next(){el.textContent=el.textContent.slice(0,--i);if(i>0)setTimeout(next,charDelay);else cb();})();}
+  function loop(){var phrase=phrases[idx];idx=(idx+1)%phrases.length;type(phrase,function(){setTimeout(function(){erase(function(){setTimeout(loop,pauseAfterErase);});},pauseAfterType);});}
+  setTimeout(loop,300);
+})();
+</script>
 {% endblock content %}
