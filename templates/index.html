@@ -67,7 +67,7 @@
 (function(){
   var el=document.getElementById('terminal-text');
   if(!el)return;
-  var phrases=['Hello there!','Welcome to my personal website!','Feel free to explore my work ;)'];
+  var phrases=['Hello there!','Welcome to my personal website!','Feel free to explore my work and reach me ;)'];
   var idx=0,charDelay=80,pauseAfterType=1500,pauseAfterErase=500;
   function type(text,cb){var i=0;(function next(){el.textContent=text.slice(0,++i);if(i<text.length)setTimeout(next,charDelay);else cb();})();}
   function erase(cb){var len=el.textContent.length,i=len;(function next(){el.textContent=el.textContent.slice(0,--i);if(i>0)setTimeout(next,charDelay);else cb();})();}
