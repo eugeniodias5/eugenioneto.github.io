@@ -2,7 +2,7 @@
 title = "Eugênio Dias Ribeiro Neto"
 description = "Eugênio's personal website to present his work, updates, and eternal learning path."
 # Base URL for your site.
-base_url = "https://eugenioneto.github.io/"
+base_url = "https://eugenioneto.github.io"
 theme = "austere"
 # No SASS - CSS is internal (located in base.html template).
 compile_sass = false
