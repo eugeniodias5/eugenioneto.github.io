@@ -1,0 +1,55 @@
+[[publications]]
+title = "An improved architecture for part-based animal re-identification through semantic segmentation distillation"
+emoji = "🌵"
+authors = ["EDR Neto", "M Chaumont", "G Subsol", "M de Garine-Wichatitsky", "H Guis"]
+venue = "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
+date = "2026"
+acceptance_rate = "33% acceptance rate. Submitted and accepted in round 2 - 26% acceptance rate "
+description = "We propose PAW-ViT (Part-AWare Vision Transformer), a novel animal re-identification architecture that guides vision transformer attention through semantic segmentation distillation during training. <br>We achieve state-of-the-art performance on two animal re-identification benchmarks, particularly in challenging cross-camera scenarios. <br> This work was presented at the WACV 2026 in Tucson, USA (if you search for the city's photos, you will understand the cactus emoji :)). <br>Check the paper, video, poster, and code implementation using the links below."
+# media = "https://www.youtube.com/watch?v=Gf1iiDJSs78&t=1s"
+youtube = "Gf1iiDJSs78"
+urls = [
+  { name = "Paper", url = "https://openaccess.thecvf.com/content/WACV2026/html/Neto_An_improved_architecture_for_part-based_animal_re-identification_through_semantic_segmentation_WACV_2026_paper.html" },
+  { name = "Poster", url = "https://wacv.thecvf.com/media/PosterPDFs/WACV%202026/337.png?t=1772040579.8499749" },
+  { name = "Video", url = "https://www.youtube.com/watch?v=Gf1iiDJSs78&t=1s" },
+  { name = "Code", url = "https://github.com/eugeniodias5/PAW-ViT" },
+]
+tags = []
+
+[[publications]]
+title = "Background-invariant re-identification of dogs from camera-trap videos in non-controlled environments"
+emoji = "🐕"
+authors = ["EDR Neto", "C Barrelet", "M Chaumont", "G Subsol", "MNF Mahfudz", "MNAPR Bone", "BS Widartono", "H Wijayanto", "DA Widiasih", "MN Farida", "WT Artama", "T Langlois", "H Guis", "E Loire", "M de Garine-Wichatitsky"]
+venue = "Ecological Informatics"
+date = "2026"
+acceptance_rate = "Impact factor: 7.3"
+description = "We propose BIFOR (Background Invariant Feature extractOR), a training strategy designed to reduce background influence for generalizable dog Re-ID. BIFOR achieves state-of-the-art cross-domain performance. <br> We released two datasets that are, to date, the largest dog re-identification datasets in literature: the YT-BB-Dog that contains more than 2,700 dogs, and the Sibetan dataset, the first long-term dog re-identification dataset featuring 59 dogs and one week of cross-camera recordings. <br> Paper, datasets, and code implementation are available below."
+media = "bifor_pipeline.png"
+urls = [
+  { name = "Paper", url = "https://www.sciencedirect.com/science/article/pii/S1574954125005564" },
+  { name = "Datasets", url = "https://www.lirmm.fr/YT-BB-Dog_Sibetan/" },
+  { name = "Code", url = "https://github.com/eugeniodias5/BIFOR/tree/main" },
+]
+tags = []
+
+[[publications]]
+title = "Re-identification of dogs from videos in uncontrolled environments"
+emoji = "🐕"
+authors = ["C Barrelet", "EDR Neto", "M Chaumont", "G Subsol", "M de Garine-Wichatitsky", "E Loire"]
+venue = "Francophone Conference on Signal and Image Processing (GRETSI)"
+date = "2023"
+location = "Grenoble, France"
+description = "Preliminary study in dog re-identification that led to our paper published at Ecological Informatics. <br> This paper was written based on the work develoed during my master's four-months internship at the LIRMM. <br> This work was presented by Marc Chaumont at the GRETSI conference."
+media = "gretsi.png"
+urls = [
+  { name = "Paper", url = "https://hal-lirmm.ccsd.cnrs.fr/lirmm-04261054v1/file/GRETSI2023_BARRELET_DIAS-RIBERO-NETO_SUBSOL_LOIRE_DE-GARINE-WITTCHATITSKY_ReId_Chiens.pdf" },
+]
+tags = []
+
+
+[[publications]]
+title = "SEAdogSEA-Indonesia: A long-term dog re-identification dataset and benchmark"
+emoji = "⏳"
+venue = "In preparation..."
+description = "Introducing the largest long-term dog re-identification dataset, comprising camera-trap images spanning four years of capture in Indonesia. Furthermore, the dataset has the highest metadata variability among existing animal re-identification datasets. We introduce a rigorous new benchmark designed to evaluate model generalization across both diverse scenarios and across temporal changes."
+

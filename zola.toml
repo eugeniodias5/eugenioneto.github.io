@@ -68,11 +68,10 @@ images_sizes = [512, 1024, 2048]
 # Navigation menu.
 menu_links = [
   { url = "$BASE_URL/", name = "Home" },
-  { url = "$BASE_URL/posts/", name = "Posts" },
-  { url = "$BASE_URL/about/", name = "About" },
+  { url = "$BASE_URL/resume/", name = "Resume" },
+  { url = "$BASE_URL/thesis/", name = "Thesis" },
+  { url = "$BASE_URL/publications/", name = "Publications" },
   { url = "$BASE_URL/projects/", name = "Projects" },
-  { url = "$BASE_URL/tags/", name = "Tags" },
-  { url = "$BASE_URL/search/", name = "Search" },
 ]
 
 # Custom colour themes. Adjust here to apply own colour.

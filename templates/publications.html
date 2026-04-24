@@ -1,0 +1,80 @@
+{% extends "base.html" -%}
+
+{% block head_extra %}
+<style>
+.publication header h2{font-size:1.05rem;margin-bottom:.15rem}
+.pub-authors{margin:.15rem 0 .5rem;font-size:.88rem}
+.pub-venue{margin-bottom:.5rem}
+.pub-links{display:flex;flex-wrap:wrap;gap:.35rem .6rem;margin-bottom:.75rem}
+a.pub-link{display:inline-block;font-size:.78rem;padding:.15em .55em;border-radius:.25rem;border:1px solid var(--accent);color:var(--accent);line-height:1.5;transition:background .2s,color .2s;text-decoration:none}
+a.pub-link:hover{background:var(--accent);color:#fff;text-decoration:none}
+.pub-yt{max-width:220px;aspect-ratio:16/9;float:right;margin:0 0 1rem 1.5rem;border-radius:.4rem;overflow:hidden}
+.pub-yt iframe{width:100%;height:100%;border:0;display:block}
+.publication .project-image{max-width:220px;float:right;margin:0 0 0 1rem;object-fit:contain}
+@media(max-width:60em){.pub-yt,.publication .project-image{float:none;max-width:100%;width:100%;margin:0 0 0}}
+</style>
+{% endblock head_extra %}
+
+{% block content -%}
+<h1>{{ section.title }}</h1>
+{{ section.content | safe }}
+{% set pub_data = load_data(path="content/" ~ section.path ~ "publications.toml", required=false) -%}
+{% if pub_data and pub_data.publications -%}
+<div class="projects">
+{% for pub in pub_data.publications -%}
+<article class="project publication">
+    <header>
+        {% if pub.emoji %}<span class="project-emoji">{{ pub.emoji }}</span>{% endif %}
+        <h2>
+          {% if pub.urls %}{% set primary = pub.urls | first %}<a href="{{ primary.url }}">{{ pub.title }}</a>
+          {% else %}{{ pub.title }}{% endif %}
+        </h2>
+    </header>
+    {% if pub.authors -%}
+    <p class="pub-authors s">{{ pub.authors | join(sep=", ") }}</p>
+    {% endif -%}
+    {% if pub.youtube -%}
+    <div class="pub-yt">
+      <iframe src="https://www.youtube.com/embed/{{ pub.youtube }}?mute=1&autoplay=1" title="{{ pub.title }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    {% elif pub.media -%}
+    {% set ext = pub.media | split(pat=".") | last %}
+    {% if ext == "mp4" or ext == "webm" or ext == "ogg" %}
+    <video src="{{ get_url(path=section.path ~ pub.media) }}" class="project-image" autoplay loop muted playsinline></video>
+    {% else %}
+    <img src="{{ get_url(path=section.path ~ pub.media) }}" alt="{{ pub.title }}" class="project-image">
+    {% endif %}
+    {% endif -%}
+    {% if pub.venue or pub.date -%}
+    <p class="pub-venue s">
+        {% if pub.venue %}<em>{{ pub.venue }}</em>{% endif %}
+        {% if pub.venue and pub.date %} · {% endif %}
+        {% if pub.date %}{{ pub.date }}{% endif %}
+    </p>
+    {% endif -%}
+    {% if pub.acceptance_rate -%}
+    <p class="pub-venue s">{{ pub.acceptance_rate }}</p>
+    {% endif -%}
+    {% if pub.description %}{{ pub.description | markdown | safe }}{% endif %}
+    {% if pub.urls -%}
+    <div class="pub-links">
+        {% for link in pub.urls -%}
+        <a href="{{ link.url }}" class="pub-link" target="_blank" rel="noopener noreferrer">{{ link.name }}</a>
+        {% endfor %}
+    </div>
+    {% endif -%}
+    {% if pub.tags -%}
+    <ul class="tags">
+        {% for tag in pub.tags -%}
+        <li>#<a href="{{ get_url(path='tags/' ~ tag | slugify) }}">{{ tag }}</a></li>
+        {% endfor -%}
+    </ul>
+    {% endif -%}
+</article>
+{% if not loop.last %}<hr>{% endif %}
+{% endfor -%}
+</div>
+{% else -%}
+<p>No publications found. Add a <code>publications.toml</code> file to this section.</p>
+{% endif -%}
+{% endblock content -%}
