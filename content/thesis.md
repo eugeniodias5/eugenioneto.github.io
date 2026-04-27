@@ -85,7 +85,7 @@ Finally, we introduce a novel benchmark on SEAdogSEA-Indonesia evaluating the ab
 
 ## Additional contributions
 
-- During my thesis, I helped the planning and supervision of four internship subjects.
+- During my thesis, I helped the planning and supervision of four internships based on my thesis subject.
 - With my colleagues G. Fourret and G. Picaud, our team was placed 2nd out of 250 participants in the [PINKCC international challenge](https://www.youtube.com/watch?v=zhzNzEtxEJg) of ovarian cancer segmentation.
 - I was reviewer for the [International Journal of Computer Vision](https://link.springer.com/journal/11263) and the journal [Multimedia Tools and Applications](https://link.springer.com/journal/11042).
 - I worked closely with international researchers from France and Southeast Asia.

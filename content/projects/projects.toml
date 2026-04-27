@@ -1,4 +1,21 @@
 [[projects]]
+title = "Machine learning in production"
+emoji = "📚"
+date = "2026 - Present"
+location = "Paris, France (remote)"
+description = """                                                                                                                           
+To broaden my expertise beyond my core research, I am currently studying Machine Learning in production, with a focus on deploying models for efficient inference. I'll be publishing some personal projects here as I progress.
+
+I am currently studying through the following books / materials:
+
+- [Machine Learning in Production by Suhas Pote](https://www.amazon.fr/Machine-Learning-Production-delivering-solutions/dp/9355518102).
+- [ML Systems textbook by Harvard](https://mlsysbook.ai/book/).
+- [Designing Machine Learning Systems by Chip Huyen](https://www.amazon.fr/Machine-Learning-Production-delivering-solutions/dp/9355518102).
+- [AI Engineer Core Track by Ed Donner](https://www.udemy.com/course/llm-engineering-master-ai-and-large-language-models/?srsltid=AfmBOopkDpR6Bh4nyXTwtGi1UNLhxXEdw6alS04cLjnBzyqRmH6jvjKg&couponCode=KEEPLEARNING).
+  """
+urls = []
+
+[[projects]]
 title = "Data scientist intern"
 emoji = "📊"
 company = "BCA Expertise"
