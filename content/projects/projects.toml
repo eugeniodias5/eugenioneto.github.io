@@ -2,7 +2,6 @@
 title = "Machine learning in production"
 emoji = "📚"
 date = "2026 - Present"
-location = "Paris, France (remote)"
 description = """                                                                                                                           
 To broaden my expertise beyond my core research, I am currently studying Machine Learning in production, with a focus on deploying models for efficient inference. I'll be publishing some personal projects here as I progress.
 
@@ -50,7 +49,7 @@ urls = []
 
 [[projects]]
 title = "Research Intern in machine learning"
-emoji = "🎓"
+emoji = "🔬"
 company = "LIRMM"
 date = "May  2022 - August 2022"
 location = "Montpellier, France"
@@ -66,8 +65,8 @@ Integrated in the ICAR (Image & Interaction) team of the LIRMM (Laboratory of Co
 
 [[projects]]
 title = "Java WEB Development Intern"
-emoji = "🔬"
-company = "Federal University of Bahia"
+emoji = "🎓"
+company = "Federal University of Bahia (UFBA)"
 date = "January  2021 - August 2021"
 location = "Salvador, Brazil (remote)"
 media = "images/projects/logo_ufba.jpeg"
