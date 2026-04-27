@@ -5,7 +5,7 @@ authors = ["EDR Neto", "M Chaumont", "G Subsol", "M de Garine-Wichatitsky", "H G
 venue = "IEEE/CVF Winter Conference on Applications of Computer Vision (WACV)"
 date = "2026"
 acceptance_rate = "33% acceptance rate. Submitted and accepted in round 2 - 26% acceptance rate "
-description = "We propose PAW-ViT (Part-AWare Vision Transformer), a novel animal re-identification architecture that guides vision transformer attention through semantic segmentation distillation during training. <br>We achieve state-of-the-art performance on two animal re-identification benchmarks, particularly in challenging cross-camera scenarios. <br> This work was presented at the WACV 2026 in Tucson, USA (if you search for the city's photos, you will understand the cactus emoji :)). <br>Check the paper, video, poster, and code implementation using the links below."
+description = "We propose PAW-ViT (Part-AWare Vision Transformer), a novel animal re-identification architecture that guides vision transformer attention through semantic segmentation distillation during training. <br>We achieve state-of-the-art performance on two animal re-identification benchmarks, particularly in challenging cross-camera scenarios. <br> This work was presented by me at the WACV 2026 in Tucson, USA (if you search for the city's photos, you will understand the cactus emoji :)). <br>Check the paper, video, poster, and code implementation using the links below."
 # media = "https://www.youtube.com/watch?v=Gf1iiDJSs78&t=1s"
 youtube = "Gf1iiDJSs78"
 urls = [
@@ -21,7 +21,7 @@ title = "Background-invariant re-identification of dogs from camera-trap videos 
 emoji = "🐕"
 authors = ["EDR Neto", "C Barrelet", "M Chaumont", "G Subsol", "MNF Mahfudz", "MNAPR Bone", "BS Widartono", "H Wijayanto", "DA Widiasih", "MN Farida", "WT Artama", "T Langlois", "H Guis", "E Loire", "M de Garine-Wichatitsky"]
 venue = "Ecological Informatics"
-date = "2026"
+date = "2025"
 acceptance_rate = "Impact factor: 7.3"
 description = "We propose BIFOR (Background Invariant Feature extractOR), a training strategy designed to reduce background influence for generalizable dog Re-ID. BIFOR achieves state-of-the-art cross-domain performance. <br> We released two datasets that are, to date, the largest dog re-identification datasets in literature: the YT-BB-Dog that contains more than 2,700 dogs, and the Sibetan dataset, the first long-term dog re-identification dataset featuring 59 dogs and one week of cross-camera recordings. <br> Paper, datasets, and code implementation are available below."
 media = "bifor_pipeline.png"
@@ -39,7 +39,7 @@ authors = ["C Barrelet", "EDR Neto", "M Chaumont", "G Subsol", "M de Garine-Wich
 venue = "Francophone Conference on Signal and Image Processing (GRETSI)"
 date = "2023"
 location = "Grenoble, France"
-description = "Preliminary study in dog re-identification that led to our paper published at Ecological Informatics. <br> This paper was written based on the work develoed during my master's four-months internship at the LIRMM. <br> This work was presented by Marc Chaumont at the GRETSI conference."
+description = "Preliminary study in dog re-identification that led to our paper published at Ecological Informatics. <br> This paper was written based on the work develoed during my master's four-months internship at the LIRMM. <br> This work was presented by Cyril Barrelet and Marc Chaumont at the GRETSI conference in Grenoble, France."
 media = "gretsi.png"
 urls = [
   { name = "Paper", url = "https://hal-lirmm.ccsd.cnrs.fr/lirmm-04261054v1/file/GRETSI2023_BARRELET_DIAS-RIBERO-NETO_SUBSOL_LOIRE_DE-GARINE-WITTCHATITSKY_ReId_Chiens.pdf" },
