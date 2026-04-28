@@ -1,6 +1,6 @@
 +++
-title = "Home"
-description = "I am a PhD student in Computer Science at the University of Montpellier, based at LIRMM in Montpellier, France. My research focuses on deep learning applied to computer vision"
+title = "Eugênio Dias Ribeiro Neto"
+description = """I am a PhD student in Computer Science at the <a href="https://www.umontpellier.fr/" target="_blank">University of Montpellier</a>, working in the <a href="https://www.lirmm.fr/icar/" target="_blank">ICAR</a> research team at <a href="https://www.lirmm.fr/" target="_blank">LIRMM</a> (Laboratory of Computer Science, Robotics and Microelectronics of Montpellier), a joint research unit of the University of Montpellier and <a href="https://www.cnrs.fr/fr" target="_blank">CNRS</a>, located in Montpellier, France. My research focuses on deep learning applied to computer vision."""
 
 [extra]
 interests = [

@@ -39,7 +39,7 @@ authors = ["C Barrelet", "EDR Neto", "M Chaumont", "G Subsol", "M de Garine-Wich
 venue = "Francophone Conference on Signal and Image Processing (GRETSI)"
 date = "2023"
 location = "Grenoble, France"
-description = "Preliminary study in dog re-identification that led to our paper published at Ecological Informatics. <br> This paper was written based on the work develoed during my master's four-months internship at the LIRMM. <br> This work was presented by Cyril Barrelet and Marc Chaumont at the GRETSI conference in Grenoble, France."
+description = "Preliminary study in dog re-identification that led to our paper published at Ecological Informatics. <br> This paper was written based on the work developed during my master's four-months internship at the LIRMM. <br> This work was presented by Cyril Barrelet and Marc Chaumont at the GRETSI conference in Grenoble, France."
 media = "images/publications/gretsi.png"
 urls = [
   { name = "Paper", url = "https://hal-lirmm.ccsd.cnrs.fr/lirmm-04261054v1/file/GRETSI2023_BARRELET_DIAS-RIBERO-NETO_SUBSOL_LOIRE_DE-GARINE-WITTCHATITSKY_ReId_Chiens.pdf" },
@@ -51,4 +51,4 @@ tags = []
 title = "SEAdogSEA-Indonesia: A long-term dog re-identification dataset and benchmark"
 emoji = "⏳"
 venue = "In preparation..."
-description = "Introducing the largest long-term dog re-identification dataset, comprising camera-trap images spanning four years of capture in Indonesia. Furthermore, the dataset has the highest metadata variability among existing animal re-identification datasets. We introduce a rigorous new benchmark designed to evaluate model generalization across both diverse scenarios and across temporal changes."
+description = "Introducing the largest long-term dog re-identification dataset, comprising camera-trap images spanning four years of capture in Indonesia. Furthermore, the dataset has the highest metadata variability among existing animal re-identification datasets. We introduce a rigorous new benchmark designed to evaluate model generalization across both diverse scenarios and temporal changes."
